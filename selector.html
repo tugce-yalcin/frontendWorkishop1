@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  div p{ /*descendant selector*/
+      background-color: red;
+  }
+  div > p{ /*child selector: sadece div altındaki etiketlerde işe yarar. 
+    altta açılmış section etiketlerine fayda etmez. */
+      background-color: blue;
+  }
+  div + p{ /*adjacent sibling selector: div etiketinden sonra gelen ilk p etiketine etki eder.*/
+      background-color: purple;
+  }
+  div ~ p{ /*general sibling selector: div etiketinden sonra gelen tüm p leri kapsar.*/
+      background-color: red;
+  }
+
+    </style>
+</head>
+<body>
+<p>
+    bu 1.satır
+</p>
+<div>
+    <p>
+    bu 2.satır 
+    </p>
+
+    <section>
+        <p>
+            bu bir section paragrafıdır.
+        </p>
+    </section>
+    <p>
+    bu 3.satır
+    </p>
+</div>
+<p>
+    bu 4.satır
+</p>
+
+
+
+    
+</body>
+</html>
